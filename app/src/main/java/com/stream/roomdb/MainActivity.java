@@ -161,22 +161,6 @@ public class MainActivity extends AppCompatActivity {
         }).start();
     }
 
-    //Observing live data without using View ModelClass
-    //commented it out since im now implementing a view Model
-//    public void liveDataTodos(){
-//        LiveData<List<Todo>> todoLists = TodoRoomDB.getInstance(getApplicationContext())
-//                .todoDao().findTodosUsingLiveData();
-//
-//        todoLists.observe(this, new Observer<List<Todo>>() {
-//            @Override
-//            public void onChanged(List<Todo> todos) {
-//                Log.d(TAG, "onChanged: "+todoLists);
-//            }
-//        });
-//        // should be put in onDestroy.
-//        todoLists.removeObservers(this);
-//    }
-
     public class InsertAsyncTask extends AsyncTask<Todo, Void, Void> {
 
         @Override
